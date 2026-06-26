@@ -1,0 +1,240 @@
+/* ══════════════════════════════════════════
+   DARK MODE — Tamil Nadu Tourism
+   ══════════════════════════════════════════ */
+
+/* ── LIGHT MODE (default) — dark text on light background ── */
+[data-theme="light"] body,
+body {
+  background: #f8f6f2;
+  color: #1c1917;
+}
+[data-theme="light"] h1,
+[data-theme="light"] h2,
+[data-theme="light"] h3,
+[data-theme="light"] h4,
+[data-theme="light"] h5,
+[data-theme="light"] h6 {
+  color: #1c1917 !important;
+}
+[data-theme="light"] p,
+[data-theme="light"] span,
+[data-theme="light"] div {
+  color: inherit;
+}
+
+/* ── DARK MODE — light text on dark background ── */
+[data-theme="dark"] body {
+  background: #080c10 !important;
+  color: #e8edf2 !important;
+}
+
+
+/* ── Override ALL hardcoded dark inline text colors ── */
+/* These are the exact colors used throughout the app inline styles */
+[data-theme="dark"] [style*="color: #1c1917"],
+[data-theme="dark"] [style*="color:#1c1917"] {
+  color: #eef2f7 !important;
+}
+[data-theme="dark"] [style*="color: #44403c"],
+[data-theme="dark"] [style*="color:#44403c"] {
+  color: #c8d3de !important;
+}
+[data-theme="dark"] [style*="color: #78716c"],
+[data-theme="dark"] [style*="color:#78716c"] {
+  color: #8fa4b8 !important;
+}
+[data-theme="dark"] [style*="color: #57534e"],
+[data-theme="dark"] [style*="color:#57534e"] {
+  color: #9aafbf !important;
+}
+
+/* All div/span/p/a text defaults to light in dark mode */
+[data-theme="dark"] div,
+[data-theme="dark"] span,
+[data-theme="dark"] li {
+  color: inherit;
+}
+
+/* Headings always light */
+[data-theme="dark"] h1,
+[data-theme="dark"] h2,
+[data-theme="dark"] h3,
+[data-theme="dark"] h4,
+[data-theme="dark"] h5,
+[data-theme="dark"] h6 {
+  color: #f0f4f8 !important;
+}
+
+/* Paragraphs — light grey */
+[data-theme="dark"] p {
+  color: #a8bac8 !important;
+}
+
+/* Labels */
+[data-theme="dark"] label {
+  color: #94a3b8 !important;
+}
+
+/* Links (non-button) */
+[data-theme="dark"] a:not(.btn-primary):not([style*="color: #"]):not([style*="color:#"]) {
+  color: inherit;
+}
+
+
+/* ── Dark page/section backgrounds ── */
+[data-theme="dark"] body,
+[data-theme="dark"] #root,
+[data-theme="dark"] section,
+[data-theme="dark"] main {
+  background: #080c10 !important;
+}
+
+[data-theme="dark"] div[style*="background: #f8f6f2"],
+[data-theme="dark"] div[style*="background: #fff"],
+[data-theme="dark"] div[style*="background: #f1f5f4"],
+[data-theme="dark"] div[style*="background:#f8f6f2"],
+[data-theme="dark"] div[style*="background:#fff"],
+[data-theme="dark"] section[style*="background: #fff"],
+[data-theme="dark"] section[style*="background: #f8f6f2"],
+[data-theme="dark"] section[style*="background: linear-gradient(180deg,#f8f6f2"],
+[data-theme="dark"] section[style*="background: linear-gradient(180deg, #f8f6f2"] {
+  background: #0d1117 !important;
+}
+
+/* ── Navbar ── */
+[data-theme="dark"] nav {
+  background: rgba(6, 9, 14, 0.94) !important;
+  border-bottom: 1px solid rgba(255,255,255,0.07) !important;
+  backdrop-filter: blur(24px) !important;
+}
+[data-theme="dark"] nav a,
+[data-theme="dark"] nav button:not(.btn-primary) {
+  color: #c9d4e0 !important;
+}
+
+/* ── Hero / grid background ── */
+[data-theme="dark"] .bg-grid {
+  background-color: #080c10 !important;
+  background-image:
+    linear-gradient(rgba(20,184,166,0.06) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(20,184,166,0.06) 1px, transparent 1px) !important;
+}
+
+/* ── Glass cards ── */
+[data-theme="dark"] .glass {
+  background: rgba(255,255,255,0.05) !important;
+  border-color: rgba(255,255,255,0.09) !important;
+  backdrop-filter: blur(20px) !important;
+}
+[data-theme="dark"] .glass-strong {
+  background: rgba(255,255,255,0.07) !important;
+  border-color: rgba(255,255,255,0.12) !important;
+}
+
+/* ── Stat/Feature tiles — subtle dark overlay, keep text visible ── */
+[data-theme="dark"] .stat-card {
+  background: rgba(255,255,255,0.06) !important;
+  border-color: rgba(255,255,255,0.1) !important;
+}
+
+/* ── Cards with colored gradient backgrounds — dim only the bg, NOT the text ── */
+[data-theme="dark"] div[style*="linear-gradient(135deg,#fef3c7"],
+[data-theme="dark"] div[style*="linear-gradient(135deg,#dbeafe"],
+[data-theme="dark"] div[style*="linear-gradient(135deg,#dcfce7"],
+[data-theme="dark"] div[style*="linear-gradient(135deg,#ffe4e6"],
+[data-theme="dark"] div[style*="linear-gradient(135deg,#ede9fe"],
+[data-theme="dark"] div[style*="linear-gradient(135deg,#ecfccb"],
+[data-theme="dark"] div[style*="linear-gradient(135deg,#f0fdfa"],
+[data-theme="dark"] div[style*="linear-gradient(135deg,#fff1f4"],
+[data-theme="dark"] div[style*="linear-gradient(135deg,#fff7ed"],
+[data-theme="dark"] div[style*="linear-gradient(135deg,rgba"] {
+  background: rgba(255,255,255,0.06) !important;
+  border: 1px solid rgba(255,255,255,0.1) !important;
+}
+
+/* ── Force all text inside glass cards to be light ── */
+[data-theme="dark"] .glass div,
+[data-theme="dark"] .glass span,
+[data-theme="dark"] .glass p,
+[data-theme="dark"] .glass-strong div,
+[data-theme="dark"] .glass-strong span {
+  color: inherit;
+}
+
+
+/* ── Forms ── */
+[data-theme="dark"] input,
+[data-theme="dark"] textarea,
+[data-theme="dark"] select {
+  background: rgba(255,255,255,0.06) !important;
+  border-color: rgba(255,255,255,0.1) !important;
+  color: #e8edf2 !important;
+}
+[data-theme="dark"] input::placeholder,
+[data-theme="dark"] textarea::placeholder {
+  color: #4a5568 !important;
+}
+
+/* ── Footer ── */
+[data-theme="dark"] footer {
+  background: linear-gradient(180deg, #030508 0%, #020304 100%) !important;
+}
+
+/* ── Admin tables ── */
+[data-theme="dark"] table tr {
+  background: rgba(255,255,255,0.025) !important;
+}
+[data-theme="dark"] table tr:hover {
+  background: rgba(13,148,136,0.08) !important;
+}
+
+/* ── Keep gradient text vivid ── */
+[data-theme="dark"] .gradient-text {
+  background: linear-gradient(135deg, #2dd4bf, #fbbf24) !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  background-clip: text !important;
+}
+
+/* ── Buttons stay consistent ── */
+[data-theme="dark"] .btn-primary {
+  background: linear-gradient(135deg, #0d9488, #f59e0b) !important;
+  color: #fff !important;
+}
+[data-theme="dark"] .btn-outline {
+  background: rgba(255,255,255,0.07) !important;
+  border-color: rgba(255,255,255,0.15) !important;
+  color: #d1d9e0 !important;
+}
+
+/* ══ Theme Toggle ══ */
+.theme-toggle {
+  width: 44px; height: 24px; border-radius: 99px;
+  border: 2px solid rgba(13,148,136,0.4);
+  background: rgba(13,148,136,0.12);
+  cursor: pointer; position: relative;
+  transition: all 0.3s ease; flex-shrink: 0;
+}
+.theme-toggle-dot {
+  width: 16px; height: 16px; border-radius: 50%;
+  background: #0d9488; position: absolute;
+  top: 2px; left: 2px; transition: transform 0.3s ease;
+}
+.theme-toggle.dark .theme-toggle-dot {
+  transform: translateX(20px); background: #f59e0b;
+}
+
+/* ══ Lang Toggle ══ */
+.lang-toggle {
+  display: inline-flex; border-radius: 99px;
+  border: 1.5px solid rgba(13,148,136,0.3);
+  overflow: hidden; font-family: 'Outfit', sans-serif;
+  font-size: 0.72rem; font-weight: 700;
+}
+.lang-btn {
+  padding: 4px 10px; cursor: pointer; border: none;
+  transition: all 0.2s; font-family: 'Outfit', sans-serif;
+  font-size: 0.72rem; font-weight: 700;
+}
+.lang-btn.active { background: linear-gradient(135deg, #0d9488, #f59e0b); color: #fff; }
+.lang-btn:not(.active) { background: transparent; color: #0d9488; }
